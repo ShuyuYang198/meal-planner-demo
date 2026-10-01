@@ -1,0 +1,106 @@
+{% extends "base.html" %} {% block content %}
+<h3>{{ r.title }}</h3>
+<p>
+    By {{r.chef_name}}<br />
+    {{ r.cuisine_name }} ({{ r.cuisine_region }}) • {{ r.total_minutes or "?" }}
+    min • serves {{ r.servings or "?" }}
+</p>
+
+<hr />
+<h4>Ingredients</h4>
+<table class="table table-striped">
+    <tr>
+        <th>Ingredient</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+    </tr>
+    {% for x in ingredients %}
+    <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.quantity or "" }}</td>
+        <td>{{ x.unit or "" }}</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="3">No ingredients yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if current_user and current_user.user_id == r.author_id %}
+<h5>Add / Update Ingredient</h5>
+<form
+    method="post"
+    action="{{ url_for('recipe_add_ingredient', recipe_id=r.recipe_id) }}"
+    class="form-inline"
+    style="margin-bottom: 12px"
+>
+    <!-- Pick existing by name OR create new (requires flavor server-side) -->
+    <input
+        class="form-control"
+        type="text"
+        name="ingredient_name"
+        list="ingredient-suggestions"
+        placeholder="Ingredient name (existing or new)"
+        required
+        style="min-width: 260px"
+    />
+    <datalist id="ingredient-suggestions">
+        {% for i in all_ingredients %}
+        <option value="{{ i.name }}"></option>
+        {% endfor %}
+    </datalist>
+
+    <input
+        class="form-control"
+        name="quantity"
+        placeholder="Qty"
+        style="width: 120px; margin-left: 6px"
+    />
+    <input
+        class="form-control"
+        name="unit"
+        placeholder="Unit (e.g., g, tbsp)"
+        style="width: 140px; margin-left: 6px"
+    />
+    <select
+        class="form-control"
+        name="ingredient_flavor"
+        style="width: 180px; margin-left: 6px"
+    >
+        <option value="" disabled selected>Flavor (required)</option>
+        <option value="">(none)</option>
+        <option value="sweet">sweet</option>
+        <option value="spicy">spicy</option>
+        <option value="salty">salty</option>
+        <option value="umami">umami</option>
+        <option value="bitter">bitter</option>
+    </select>
+
+    <input
+        class="form-control"
+        name="ingredient_type"
+        placeholder="Type (optional)"
+        style="width: 160px; margin-left: 6px"
+    />
+    <input
+        class="form-control"
+        name="ingredient_color"
+        placeholder="Color (optional)"
+        style="width: 160px; margin-left: 6px"
+    />
+
+    <button class="btn btn-default" type="submit" style="margin-left: 6px">
+        Save
+    </button>
+</form>
+<small class="text-muted">
+    Tip: If the ingredient name isn’t found, we’ll create it. Provide
+    <em>Flavor</em> for new ingredients.
+</small>
+{% endif %}
+
+<hr />
+<h4>Comments</h4>
+{% include "_comment_form.html" with context %} {% include "_comments.html" with
+context %} {% endblock %}

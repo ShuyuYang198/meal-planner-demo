@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+<h3>My Meal Plans</h3>
+<p>
+    <a class="btn btn-primary" href="{{ url_for('mealplan_new') }}"
+        >New Meal Plan</a
+    >
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+    {% for p in plans %}
+    <tr>
+        <td>
+            <a href="{{ url_for('mealplan_detail', pid=p.mealplan_id) }}"
+                >{{ p.title or ("Plan " ~ p.mealplan_id) }}</a
+            >
+        </td>
+        <td>{{ p.start_date }}</td>
+        <td>{{ p.end_date }}</td>
+        <td>
+            <form
+                method="post"
+                action="{{ url_for('mealplan_delete', pid=p.mealplan_id)}}"
+                style="display: inline"
+            >
+                <button
+                    class="btn btn-xs btn-danger"
+                    onclick="return confirm('Delete this mealplan and all its items?')"
+                >
+                    Delete
+                </button>
+            </form>
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="3">No plans yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,31 @@
+{# partial template that lists comments for a recipe #}
+<ul class="list-unstyled">
+    {% for c in comments %}
+    <li style="margin-bottom: 10px">
+        <div>
+            <strong>{{ c.author }}</strong>
+            <small class="text-muted">{{ c.created_at }}</small>
+        </div>
+        <div>{{ c.body }}</div>
+
+        {# Author of the comment or recipe author can delete #} {% if
+        current_user and (current_user.user_id == c.user_id or (r is defined and
+        current_user.user_id == r.author_id)) %}
+        <form
+            method="post"
+            action="{{ url_for('recipe_comment_delete', recipe_id=r.recipe_id, comment_id=c.comment_id) }}"
+            style="margin-top: 4px"
+        >
+            <button
+                class="btn btn-xs btn-danger"
+                onclick="return confirm('Delete this comment?')"
+            >
+                Delete
+            </button>
+        </form>
+        {% endif %}
+    </li>
+    {% else %}
+    <li>No comments yet.</li>
+    {% endfor %}
+</ul>

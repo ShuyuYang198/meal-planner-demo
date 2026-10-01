@@ -1,0 +1,1874 @@
+[
+  {
+    "recipe_id": 1,
+    "title": "Mapo Tofu",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "Tofu",
+      "Chili",
+      "Garlic",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 2,
+    "title": "Tomato Egg Stir Fry",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 20,
+    "servings": 3,
+    "ingredients": [
+      "Tomato",
+      "Egg",
+      "Scallion"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 3,
+    "title": "Ginger Chicken Rice",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 25,
+    "servings": 4,
+    "ingredients": [
+      "Chicken",
+      "Rice",
+      "Ginger",
+      "Scallion"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 4,
+    "title": "Garlic Bok Choy",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 30,
+    "servings": 2,
+    "ingredients": [
+      "Bok choy",
+      "Garlic",
+      "Sesame oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 5,
+    "title": "Mushroom Fried Rice",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 35,
+    "servings": 3,
+    "ingredients": [
+      "Mushroom",
+      "Rice",
+      "Carrot",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 6,
+    "title": "Sesame Cucumber Salad",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 40,
+    "servings": 4,
+    "ingredients": [
+      "Cucumber",
+      "Sesame oil",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 7,
+    "title": "Sweet Corn Soup",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 45,
+    "servings": 2,
+    "ingredients": [
+      "Corn",
+      "Egg",
+      "Scallion"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 8,
+    "title": "Steamed Ginger Fish",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 50,
+    "servings": 3,
+    "ingredients": [
+      "White fish",
+      "Ginger",
+      "Scallion",
+      "Soy sauce"
+    ],
+    "diets": [
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 9,
+    "title": "Chili Eggplant",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 55,
+    "servings": 4,
+    "ingredients": [
+      "Eggplant",
+      "Chili",
+      "Garlic",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 10,
+    "title": "Beef Pepper Stir Fry",
+    "cuisine": "Chinese",
+    "region": "Sichuan",
+    "minutes": 60,
+    "servings": 2,
+    "ingredients": [
+      "Beef",
+      "Bell pepper",
+      "Garlic",
+      "Soy sauce"
+    ],
+    "diets": []
+  },
+  {
+    "recipe_id": 11,
+    "title": "Tomato Basil Pasta",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      "Pasta",
+      "Tomato",
+      "Basil",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 12,
+    "title": "Mushroom Risotto",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 25,
+    "servings": 3,
+    "ingredients": [
+      "Rice",
+      "Mushroom",
+      "Parmesan",
+      "Butter"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 13,
+    "title": "Lemon Chicken",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 30,
+    "servings": 4,
+    "ingredients": [
+      "Chicken",
+      "Lemon",
+      "Garlic",
+      "Olive oil"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 14,
+    "title": "Caprese Salad",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 35,
+    "servings": 2,
+    "ingredients": [
+      "Tomato",
+      "Mozzarella",
+      "Basil",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 15,
+    "title": "White Bean Soup",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 40,
+    "servings": 3,
+    "ingredients": [
+      "White beans",
+      "Carrot",
+      "Onion",
+      "Tomato"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 16,
+    "title": "Spinach Gnocchi",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 45,
+    "servings": 4,
+    "ingredients": [
+      "Gnocchi",
+      "Spinach",
+      "Parmesan",
+      "Butter"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 17,
+    "title": "Roasted Vegetable Polenta",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 50,
+    "servings": 2,
+    "ingredients": [
+      "Polenta",
+      "Zucchini",
+      "Bell pepper",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 18,
+    "title": "Garlic Shrimp Linguine",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 55,
+    "servings": 3,
+    "ingredients": [
+      "Pasta",
+      "Shrimp",
+      "Garlic",
+      "Lemon"
+    ],
+    "diets": [
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 19,
+    "title": "Eggplant Parmesan",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 60,
+    "servings": 4,
+    "ingredients": [
+      "Eggplant",
+      "Parmesan",
+      "Tomato",
+      "Mozzarella"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 20,
+    "title": "Tuscan Chickpea Stew",
+    "cuisine": "Italian",
+    "region": "Tuscany",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "Chickpeas",
+      "Spinach",
+      "Tomato",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 21,
+    "title": "Salmon Rice Bowl",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      "Salmon",
+      "Rice",
+      "Cucumber",
+      "Soy sauce"
+    ],
+    "diets": [
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 22,
+    "title": "Tofu Miso Soup",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 30,
+    "servings": 3,
+    "ingredients": [
+      "Tofu",
+      "Miso",
+      "Seaweed",
+      "Scallion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 23,
+    "title": "Chicken Udon",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 35,
+    "servings": 4,
+    "ingredients": [
+      "Chicken",
+      "Udon",
+      "Mushroom",
+      "Soy sauce"
+    ],
+    "diets": []
+  },
+  {
+    "recipe_id": 24,
+    "title": "Vegetable Sushi Bowl",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 40,
+    "servings": 2,
+    "ingredients": [
+      "Rice",
+      "Avocado",
+      "Cucumber",
+      "Seaweed"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 25,
+    "title": "Ginger Pork",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 45,
+    "servings": 3,
+    "ingredients": [
+      "Pork",
+      "Ginger",
+      "Onion",
+      "Soy sauce"
+    ],
+    "diets": []
+  },
+  {
+    "recipe_id": 26,
+    "title": "Sesame Spinach",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 50,
+    "servings": 4,
+    "ingredients": [
+      "Spinach",
+      "Sesame oil",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 27,
+    "title": "Mushroom Soba",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 55,
+    "servings": 2,
+    "ingredients": [
+      "Soba",
+      "Mushroom",
+      "Scallion",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 28,
+    "title": "Egg Rice Bowl",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 60,
+    "servings": 3,
+    "ingredients": [
+      "Egg",
+      "Rice",
+      "Onion",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 29,
+    "title": "Cabbage Pancake",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 15,
+    "servings": 4,
+    "ingredients": [
+      "Cabbage",
+      "Flour",
+      "Egg",
+      "Scallion"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 30,
+    "title": "Edamame Rice",
+    "cuisine": "Japanese",
+    "region": "Kanto",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      "Edamame",
+      "Rice",
+      "Sesame oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 31,
+    "title": "Chickpea Curry",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 30,
+    "servings": 2,
+    "ingredients": [
+      "Chickpeas",
+      "Tomato",
+      "Onion",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 32,
+    "title": "Red Lentil Dal",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 35,
+    "servings": 3,
+    "ingredients": [
+      "Red lentils",
+      "Tomato",
+      "Turmeric",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 33,
+    "title": "Spinach Paneer",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 40,
+    "servings": 4,
+    "ingredients": [
+      "Spinach",
+      "Paneer",
+      "Onion",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 34,
+    "title": "Vegetable Biryani",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 45,
+    "servings": 2,
+    "ingredients": [
+      "Rice",
+      "Carrot",
+      "Peas",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 35,
+    "title": "Coconut Chicken Curry",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 50,
+    "servings": 3,
+    "ingredients": [
+      "Chicken",
+      "Coconut milk",
+      "Tomato",
+      "Turmeric"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 36,
+    "title": "Potato Cauliflower Curry",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 55,
+    "servings": 4,
+    "ingredients": [
+      "Potato",
+      "Cauliflower",
+      "Turmeric",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 37,
+    "title": "Cucumber Raita",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 60,
+    "servings": 2,
+    "ingredients": [
+      "Cucumber",
+      "Yogurt",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 38,
+    "title": "Lentil Rice Khichdi",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 15,
+    "servings": 3,
+    "ingredients": [
+      "Red lentils",
+      "Rice",
+      "Turmeric"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 39,
+    "title": "Masala Omelette",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 20,
+    "servings": 4,
+    "ingredients": [
+      "Egg",
+      "Onion",
+      "Tomato",
+      "Chili"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 40,
+    "title": "Pea Paneer Curry",
+    "cuisine": "Indian",
+    "region": "Punjab",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      "Peas",
+      "Paneer",
+      "Tomato",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 41,
+    "title": "Black Bean Tacos",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 35,
+    "servings": 2,
+    "ingredients": [
+      "Black beans",
+      "Corn tortilla",
+      "Tomato",
+      "Avocado"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 42,
+    "title": "Chicken Fajita Bowl",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 40,
+    "servings": 3,
+    "ingredients": [
+      "Chicken",
+      "Rice",
+      "Bell pepper",
+      "Onion"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 43,
+    "title": "Corn Avocado Salad",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 45,
+    "servings": 4,
+    "ingredients": [
+      "Corn",
+      "Avocado",
+      "Lime",
+      "Tomato"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 44,
+    "title": "Sweet Potato Tacos",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 50,
+    "servings": 2,
+    "ingredients": [
+      "Sweet potato",
+      "Corn tortilla",
+      "Black beans",
+      "Lime"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 45,
+    "title": "Tomato Rice",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 55,
+    "servings": 3,
+    "ingredients": [
+      "Rice",
+      "Tomato",
+      "Onion",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 46,
+    "title": "Lime Shrimp Bowl",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 60,
+    "servings": 4,
+    "ingredients": [
+      "Shrimp",
+      "Rice",
+      "Lime",
+      "Avocado"
+    ],
+    "diets": [
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 47,
+    "title": "Bean Quesadilla",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "Black beans",
+      "Flour tortilla",
+      "Cheddar"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 48,
+    "title": "Vegetable Tortilla Soup",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 20,
+    "servings": 3,
+    "ingredients": [
+      "Corn tortilla",
+      "Tomato",
+      "Corn",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 49,
+    "title": "Breakfast Egg Tacos",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 25,
+    "servings": 4,
+    "ingredients": [
+      "Egg",
+      "Corn tortilla",
+      "Tomato",
+      "Cheddar"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 50,
+    "title": "Cumin Lentil Bowl",
+    "cuisine": "Mexican",
+    "region": "Oaxaca",
+    "minutes": 30,
+    "servings": 2,
+    "ingredients": [
+      "Red lentils",
+      "Rice",
+      "Cumin",
+      "Avocado"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 51,
+    "title": "Menemen",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 40,
+    "servings": 2,
+    "ingredients": [
+      "Egg",
+      "Tomato",
+      "Bell pepper",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 52,
+    "title": "Red Lentil Soup",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 45,
+    "servings": 3,
+    "ingredients": [
+      "Red lentils",
+      "Carrot",
+      "Onion",
+      "Cumin"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 53,
+    "title": "Bulgur Pilaf",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 50,
+    "servings": 4,
+    "ingredients": [
+      "Bulgur",
+      "Tomato",
+      "Onion",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 54,
+    "title": "Chickpea Spinach Stew",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 55,
+    "servings": 2,
+    "ingredients": [
+      "Chickpeas",
+      "Spinach",
+      "Tomato",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 55,
+    "title": "Yogurt Cucumber Bowl",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 60,
+    "servings": 3,
+    "ingredients": [
+      "Yogurt",
+      "Cucumber",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 56,
+    "title": "Stuffed Bell Peppers",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 15,
+    "servings": 4,
+    "ingredients": [
+      "Bell pepper",
+      "Rice",
+      "Tomato",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 57,
+    "title": "Lemon Herb Chicken",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      "Chicken",
+      "Lemon",
+      "Parsley",
+      "Olive oil"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 58,
+    "title": "White Bean Stew",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 25,
+    "servings": 3,
+    "ingredients": [
+      "White beans",
+      "Tomato",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 59,
+    "title": "Eggplant Tomato Bake",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 30,
+    "servings": 4,
+    "ingredients": [
+      "Eggplant",
+      "Tomato",
+      "Garlic",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 60,
+    "title": "Parsley Bulgur Salad",
+    "cuisine": "Turkish",
+    "region": "Aegean",
+    "minutes": 35,
+    "servings": 2,
+    "ingredients": [
+      "Bulgur",
+      "Parsley",
+      "Tomato",
+      "Lemon"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 61,
+    "title": "Coconut Tofu Curry",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 45,
+    "servings": 2,
+    "ingredients": [
+      "Tofu",
+      "Coconut milk",
+      "Bell pepper",
+      "Chili"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 62,
+    "title": "Basil Chicken",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 50,
+    "servings": 3,
+    "ingredients": [
+      "Chicken",
+      "Basil",
+      "Garlic",
+      "Chili"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 63,
+    "title": "Pineapple Fried Rice",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 55,
+    "servings": 4,
+    "ingredients": [
+      "Pineapple",
+      "Rice",
+      "Carrot",
+      "Peas"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 64,
+    "title": "Lime Cucumber Salad",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 60,
+    "servings": 2,
+    "ingredients": [
+      "Cucumber",
+      "Lime",
+      "Chili"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 65,
+    "title": "Coconut Mushroom Soup",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 15,
+    "servings": 3,
+    "ingredients": [
+      "Mushroom",
+      "Coconut milk",
+      "Ginger",
+      "Lime"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 66,
+    "title": "Peanut Rice Noodles",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 20,
+    "servings": 4,
+    "ingredients": [
+      "Rice noodles",
+      "Peanut",
+      "Carrot",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 67,
+    "title": "Garlic Shrimp Rice",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      "Shrimp",
+      "Rice",
+      "Garlic",
+      "Lime"
+    ],
+    "diets": [
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 68,
+    "title": "Sweet Potato Coconut Soup",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 30,
+    "servings": 3,
+    "ingredients": [
+      "Sweet potato",
+      "Coconut milk",
+      "Ginger"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 69,
+    "title": "Chili Basil Eggplant",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 35,
+    "servings": 4,
+    "ingredients": [
+      "Eggplant",
+      "Basil",
+      "Chili",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 70,
+    "title": "Mango Coconut Rice",
+    "cuisine": "Thai",
+    "region": "Central",
+    "minutes": 40,
+    "servings": 2,
+    "ingredients": [
+      "Mango",
+      "Rice",
+      "Coconut milk"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 71,
+    "title": "Greek Village Salad",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 50,
+    "servings": 2,
+    "ingredients": [
+      "Tomato",
+      "Cucumber",
+      "Feta",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 72,
+    "title": "Lemon Chickpea Soup",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 55,
+    "servings": 3,
+    "ingredients": [
+      "Chickpeas",
+      "Lemon",
+      "Carrot",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 73,
+    "title": "Spinach Feta Rice",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 60,
+    "servings": 4,
+    "ingredients": [
+      "Spinach",
+      "Feta",
+      "Rice",
+      "Lemon"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 74,
+    "title": "Oregano Chicken",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "Chicken",
+      "Oregano",
+      "Lemon",
+      "Olive oil"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 75,
+    "title": "White Bean Tomato Bake",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 20,
+    "servings": 3,
+    "ingredients": [
+      "White beans",
+      "Tomato",
+      "Onion",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 76,
+    "title": "Roasted Lemon Potatoes",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 25,
+    "servings": 4,
+    "ingredients": [
+      "Potato",
+      "Lemon",
+      "Oregano",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 77,
+    "title": "Yogurt Herb Dip",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 30,
+    "servings": 2,
+    "ingredients": [
+      "Yogurt",
+      "Cucumber",
+      "Parsley",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 78,
+    "title": "Zucchini Feta Fritters",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 35,
+    "servings": 3,
+    "ingredients": [
+      "Zucchini",
+      "Feta",
+      "Egg",
+      "Flour"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 79,
+    "title": "Mediterranean Fish",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 40,
+    "servings": 4,
+    "ingredients": [
+      "White fish",
+      "Tomato",
+      "Lemon",
+      "Olive oil"
+    ],
+    "diets": [
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 80,
+    "title": "Lentil Cucumber Salad",
+    "cuisine": "Greek",
+    "region": "Crete",
+    "minutes": 45,
+    "servings": 2,
+    "ingredients": [
+      "Red lentils",
+      "Cucumber",
+      "Tomato",
+      "Parsley"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 81,
+    "title": "Tofu Bibimbap",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 55,
+    "servings": 2,
+    "ingredients": [
+      "Tofu",
+      "Rice",
+      "Carrot",
+      "Spinach",
+      "Sesame oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 82,
+    "title": "Scallion Pancakes",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 60,
+    "servings": 3,
+    "ingredients": [
+      "Scallion",
+      "Flour",
+      "Egg",
+      "Soy sauce"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 83,
+    "title": "Sesame Beef Bowl",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 15,
+    "servings": 4,
+    "ingredients": [
+      "Beef",
+      "Rice",
+      "Sesame oil",
+      "Soy sauce"
+    ],
+    "diets": []
+  },
+  {
+    "recipe_id": 84,
+    "title": "Spicy Cucumber Banchan",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      "Cucumber",
+      "Chili",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 85,
+    "title": "Mushroom Glass Noodles",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 25,
+    "servings": 3,
+    "ingredients": [
+      "Glass noodles",
+      "Mushroom",
+      "Carrot",
+      "Spinach"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 86,
+    "title": "Garlic Spinach Banchan",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 30,
+    "servings": 4,
+    "ingredients": [
+      "Spinach",
+      "Garlic",
+      "Sesame oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 87,
+    "title": "Gochujang Chicken",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 35,
+    "servings": 2,
+    "ingredients": [
+      "Chicken",
+      "Gochujang",
+      "Garlic",
+      "Rice"
+    ],
+    "diets": []
+  },
+  {
+    "recipe_id": 88,
+    "title": "Potato Soy Braise",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 40,
+    "servings": 3,
+    "ingredients": [
+      "Potato",
+      "Soy sauce",
+      "Garlic"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 89,
+    "title": "Seaweed Tofu Soup",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 45,
+    "servings": 4,
+    "ingredients": [
+      "Seaweed",
+      "Tofu",
+      "Garlic",
+      "Sesame oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 90,
+    "title": "Egg Vegetable Rice",
+    "cuisine": "Korean",
+    "region": "Seoul",
+    "minutes": 50,
+    "servings": 2,
+    "ingredients": [
+      "Egg",
+      "Rice",
+      "Carrot",
+      "Scallion"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 91,
+    "title": "Avocado Egg Toast",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 60,
+    "servings": 2,
+    "ingredients": [
+      "Bread",
+      "Avocado",
+      "Egg",
+      "Lemon"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  },
+  {
+    "recipe_id": 92,
+    "title": "Berry Oatmeal",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 15,
+    "servings": 3,
+    "ingredients": [
+      "Oats",
+      "Blueberry",
+      "Milk"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 93,
+    "title": "Roasted Squash Bowl",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 20,
+    "servings": 4,
+    "ingredients": [
+      "Squash",
+      "Quinoa",
+      "Spinach",
+      "Olive oil"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 94,
+    "title": "Turkey Bean Chili",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      "Turkey",
+      "Black beans",
+      "Tomato",
+      "Cumin"
+    ],
+    "diets": [
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 95,
+    "title": "Apple Walnut Salad",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 30,
+    "servings": 3,
+    "ingredients": [
+      "Apple",
+      "Walnut",
+      "Spinach",
+      "Lemon"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 96,
+    "title": "Lemon Salmon Quinoa",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 35,
+    "servings": 4,
+    "ingredients": [
+      "Salmon",
+      "Quinoa",
+      "Lemon",
+      "Olive oil"
+    ],
+    "diets": [
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 97,
+    "title": "Peanut Banana Oats",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 40,
+    "servings": 2,
+    "ingredients": [
+      "Oats",
+      "Peanut",
+      "Banana",
+      "Milk"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 98,
+    "title": "Broccoli Cheddar Soup",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 45,
+    "servings": 3,
+    "ingredients": [
+      "Broccoli",
+      "Cheddar",
+      "Milk",
+      "Onion"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 99,
+    "title": "Maple Sweet Potato Bowl",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 50,
+    "servings": 4,
+    "ingredients": [
+      "Sweet potato",
+      "Quinoa",
+      "Maple syrup",
+      "Walnut"
+    ],
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "pescatarian",
+      "gluten-free"
+    ]
+  },
+  {
+    "recipe_id": 100,
+    "title": "Grilled Vegetable Sandwich",
+    "cuisine": "American",
+    "region": "California",
+    "minutes": 55,
+    "servings": 2,
+    "ingredients": [
+      "Bread",
+      "Zucchini",
+      "Bell pepper",
+      "Mozzarella"
+    ],
+    "diets": [
+      "vegetarian",
+      "pescatarian"
+    ]
+  }
+]

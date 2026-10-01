@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<h3>Grocery List — {{ plan.title or ("Meal Plan " ~ plan.mealplan_id) }}</h3>
+<p class="text-muted">{{ plan.start_date }} → {{ plan.end_date }}</p>
+
+{% if items and items|length > 0 %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ingredient</th>
+            <th class="text-right">Quantity</th>
+            <th>Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in items %}
+        <tr>
+            <td>{{ r.ingredient }}</td>
+            <td class="text-right">{{ r.total_qty }}</td>
+            <td>{{ r.unit or '—' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-info">No items in this plan yet.</div>
+{% endif %}
+
+<a
+    class="btn btn-default"
+    href="{{ url_for('mealplan_detail', pid=plan.mealplan_id) }}"
+    >Back to plan</a
+>
+{% endblock %}

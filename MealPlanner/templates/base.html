@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Meal Planner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='bootstrap.min.css') }}"
+        />
+        <style>
+            body {
+                padding-top: 125px; /* space for fixed navbar */
+            }
+            .navbar-brand {
+                font-weight: 600;
+            }
+            .container-narrow {
+                max-width: 980px;
+            }
+
+            .navbar .navbar-text {
+                margin: 0 10px 0 0;
+            }
+            .navbar-right .navbar-btn {
+                margin: 0 0 0 10px;
+            }
+            .navbar-right form {
+                display: inline-block;
+                margin: 0;
+            }
+            .navbar-username p {
+                margin: 0;
+            }
+
+            .alert {
+                margin-top: 0;
+            }
+
+            @media (min-width: 768px) {
+                .navbar .navbar-collapse {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .navbar-nav {
+                    display: flex;
+                    align-items: center;
+                    float: none;
+                }
+                .navbar-nav > li {
+                    float: none;
+                }
+
+                .navbar-right {
+                    float: none !important; /* remove Bootstrap float */
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+                .navbar-right > li {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .navbar .navbar-btn {
+                    padding: 6px 10px;
+                    line-height: 20px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                .navbar .navbar-text {
+                    margin: 10px 0;
+                }
+                .navbar-right .navbar-btn {
+                    margin: 10px 0 0 0;
+                }
+            }
+            .jumbotron {
+                margin-top: 10px;
+            }
+            .panel > .panel-heading {
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container container-narrow">
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#main-nav"
+                    >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('index') }}"
+                        >Meal Planner</a
+                    >
+                </div>
+
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="nav navbar-nav">
+                        <li
+                            class="{% if request.endpoint == 'index' %}active{% endif %}"
+                        >
+                            <a href="{{ url_for('index') }}">Home</a>
+                        </li>
+
+                        {% if current_user %}
+                        <li
+                            class="dropdown {% if request.endpoint == 'for_you' %}active{% endif %}"
+                        >
+                            <a
+                                href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-expanded="false"
+                            >
+                                For You <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ url_for('for_you') }}"
+                                        >For You Page</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('prefs') }}"
+                                        >Preferences</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li
+                            class="{% if request.endpoint == 'for_you' %}active{% endif %}"
+                        >
+                            <a href="{{ url_for('auth_page') }}">For You</a>
+                        </li>
+                        {% endif %}
+                        <li
+                            class="dropdown {% if request.endpoint in ['recipes_new', 'trending', 'recipe_detail'] %}active{% endif %}"
+                        >
+                            <a
+                                href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-expanded="false"
+                            >
+                                Recipes <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ url_for('trending') }}"
+                                        >Trending</a
+                                    >
+                                </li>
+                                {% if current_user %}
+                                <li>
+                                    <a href="{{ url_for('recipes_new') }}"
+                                        >Add Recipe</a
+                                    >
+                                </li>
+                                {% else %}
+                                <li>
+                                    <a href="{{ url_for('auth_page') }}"
+                                        >Add Recipe</a
+                                    >
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+
+                        {% if current_user %}
+                        <li
+                            class="dropdown {% if request.endpoint in ['mealplans_for_user','mealplan_detail','mealplan_new'] %}active{% endif %}"
+                        >
+                            <a
+                                href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-expanded="false"
+                            >
+                                Meal Plans <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a
+                                        href="{{ url_for('mealplans_for_user', user_id=current_user.user_id) }}"
+                                    >
+                                        My Meal Plans
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('mealplan_new') }}"
+                                        >New Meal Plan</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li
+                            class="{% if request.endpoint in ['mealplans_for_user','mealplan_new'] %}active{% endif %}"
+                        >
+                            <a href="{{ url_for('auth_page') }}">Meal Plans</a>
+                        </li>
+                        {% endif %}
+
+                        <li
+                            class="dropdown {% if request.endpoint in ['chef_list', 'chef_detail', 'followed_chefs'] %}active{% endif %}"
+                        >
+                            <a
+                                href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-expanded="false"
+                            >
+                                Chefs <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ url_for('chef_list') }}"
+                                        >All Chefs</a
+                                    >
+                                </li>
+
+                                {% if current_user %}
+                                <li>
+                                    <a href="{{ url_for('followed_chefs') }}"
+                                        >Followed Chefs</a
+                                    >
+                                </li>
+                                {% else %}
+                                <li>
+                                    <a href="{{ url_for('auth_page') }}"
+                                        >Followed Chefs</a
+                                    >
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+
+                        <li
+                            class="{% if request.endpoint == 'search' %}active{% endif %}"
+                        >
+                            <a href="{{ url_for('search') }}">Search</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if current_user %}
+                        <li class="navbar-username hidden-xs">
+                            <p class="navbar-text">
+                                Signed in as
+                                <strong>{{ current_user.name }}</strong>
+                            </p>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="javascript:void(0)"
+                                >Signed in as
+                                <strong>{{ current_user.name }}</strong></a
+                            >
+                        </li>
+
+                        <li><a href="{{ url_for('account') }}">Account</a></li>
+                        <li>
+                            <form
+                                method="post"
+                                action="{{ url_for('logout') }}"
+                            >
+                                <button
+                                    type="submit"
+                                    class="btn btn-danger btn-xs navbar-btn"
+                                >
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a
+                                class="navbar-link"
+                                href="{{ url_for('auth_page') }}"
+                                >Login / Register</a
+                            >
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container container-narrow">
+            <div class="alert alert-warning">Local demo · All records are fictional. Log in with username <strong>demo</strong> (no password).</div>
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <div class="alert alert-info" style="margin-top: 0px">
+                {% for m in messages %}
+                <div>{{ m }}</div>
+                {% endfor %}
+            </div>
+            {% endif %} {% endwith %} {% block content %}{% endblock %}
+        </div>
+
+        <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    </body>
+</html>

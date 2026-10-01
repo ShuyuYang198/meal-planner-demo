@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<h3>Chefs</h3>
+
+<div class="btn-group" role="group" aria-label="Sort">
+    <a
+        class="btn btn-default {% if sort == 'rating' %}active{% endif %}"
+        href="{{ url_for('chef_list', sort='rating') }}"
+        >Sort by Rating</a
+    >
+    <a
+        class="btn btn-default {% if sort == 'followers' %}active{% endif %}"
+        href="{{ url_for('chef_list', sort='followers') }}"
+        >Sort by Followers</a
+    >
+</div>
+
+<table class="table table-striped" style="margin-top: 12px">
+    <tr>
+        <th>Name</th>
+        <th>Avg Rating</th>
+        <th>Followers</th>
+        <th></th>
+    </tr>
+    {% for c in chefs %}
+    <tr>
+        <td>{{ c.name }}</td>
+        <td>{{ c.avg_r if c.avg_r is not none else '—' }}</td>
+        <td>{{ c.fcount or 0 }}</td>
+        <td>
+            <a
+                class="btn btn-xs btn-primary"
+                href="{{ url_for('chef_detail', user_id=c.user_id) }}"
+                >View</a
+            >
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="4">No chefs found.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

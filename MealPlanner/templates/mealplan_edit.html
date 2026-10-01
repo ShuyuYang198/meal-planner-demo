@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<h3>Edit Meal Plan</h3>
+<form
+    method="post"
+    action="{{ url_for('mealplan_edit', pid=plan.mealplan_id) }}"
+    class="form-inline"
+>
+    <input
+        class="form-control"
+        type="text"
+        name="title"
+        placeholder="Title"
+        value="{{ plan.title or '' }}"
+        style="min-width: 220px"
+    />
+    <input
+        class="form-control"
+        type="date"
+        name="start_date"
+        value="{{ plan.start_date }}"
+    />
+    <input
+        class="form-control"
+        type="date"
+        name="end_date"
+        value="{{ plan.end_date }}"
+    />
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a
+        class="btn btn-default"
+        href="{{ url_for('mealplan_detail', pid=plan.mealplan_id) }}"
+        >Cancel</a
+    >
+</form>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-3">
+  <h3 class="mb-3">Preferences</h3>
+
+  <form method="post" action="{{ url_for('prefs') }}" class="form">
+    <input type="hidden" name="op" value="save">
+    <div class="form-group">
+      <label for="diet">Diet</label>
+      <select class="form-control" id="diet" name="diet">
+        <option value="" {% if not pref or not pref.diet %}selected{% endif %}>(none)</option>
+        <option value="vegetarian"  {% if pref and pref.diet=='vegetarian'  %}selected{% endif %}>Vegetarian</option>
+        <option value="vegan"       {% if pref and pref.diet=='vegan'       %}selected{% endif %}>Vegan</option>
+        <option value="keto"        {% if pref and pref.diet=='keto'        %}selected{% endif %}>Keto</option>
+        <option value="pescatarian" {% if pref and pref.diet=='pescatarian' %}selected{% endif %}>Pescatarian</option>
+        <option value="gluten-free" {% if pref and pref.diet=='gluten-free' %}selected{% endif %}>Gluten-free</option>
+      </select>
+      <p class="help-block">Optional. Used as a soft filter for recommendations.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="allergies">Allergies (comma-separated)</label>
+      <input class="form-control" id="allergies" name="allergies"
+             placeholder="e.g., peanut, shellfish, sesame"
+             value="{{ pref.allergies if pref and pref.allergies else '' }}">
+      <p class="help-block">Recipes containing any of these ingredients will be excluded.</p>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success" type="submit">Save Preferences</button>
+      <a class="btn btn-default" href="{{ url_for('for_you') }}">Back to For You</a>
+    </div>
+  </form>
+
+  <hr>
+
+  <h4>Manage Allergies</h4>
+  <p class="text-muted">Quickly remove or add individual allergies.</p>
+
+  <div class="mb-2">
+    {% set tokens = (pref.allergies.split(",") if pref and pref.allergies else []) %}
+    {% for raw in tokens %}
+      {% set t = raw.strip() %}
+      {% if t %}
+        <form method="post" action="{{ url_for('prefs') }}" style="display:inline">
+          <input type="hidden" name="op" value="remove_allergy">
+          <input type="hidden" name="token" value="{{ t }}">
+          <span class="label label-warning" style="margin-right:6px; display:inline-block;">
+            {{ t }}
+            <button type="submit" class="btn btn-link btn-xs" style="padding:0; color:#a94442; text-decoration:none;">
+              &times;
+            </button>
+          </span>
+        </form>
+      {% endif %}
+    {% else %}
+      <span class="text-muted">No allergies set.</span>
+    {% endfor %}
+  </div>
+
+  <form method="post" action="{{ url_for('prefs') }}" class="form-inline">
+    <input type="hidden" name="op" value="add_allergy">
+    <div class="form-group">
+      <label class="sr-only" for="new-allergy">Add allergy</label>
+      <input id="new-allergy" name="token" class="form-control" placeholder="Add allergy (e.g., walnut)">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block content %}
+<h3>{{ chef.name }}</h3>
+<p>
+    <strong>Average Rating:</strong> {{ chef.avg_r if chef.avg_r is not none
+    else '—' }} &nbsp;|&nbsp; <strong>Followers:</strong> {{ chef.followers or 0
+    }}
+</p>
+
+{% if current_user %} {% if current_user.user_id != chef.user_id %}
+<div style="margin-bottom: 12px">
+    {% if following %}
+    <form
+        method="post"
+        action="{{ url_for('unfollow_chef', chef_id=chef.user_id) }}"
+        style="display: inline"
+    >
+        <button class="btn btn-warning btn-sm" type="submit">Unfollow</button>
+    </form>
+    {% else %}
+    <form
+        method="post"
+        action="{{ url_for('follow_chef', chef_id=chef.user_id) }}"
+        style="display: inline"
+    >
+        <button class="btn btn-success btn-sm" type="submit">Follow</button>
+    </form>
+    {% endif %}
+
+    <form
+        method="post"
+        action="{{ url_for('rate_chef', chef_id=chef.user_id) }}"
+        style="display: inline; margin-left: 8px"
+    >
+        <label class="control-label" for="rating" style="margin-right: 6px"
+            >Rate</label
+        >
+        <select
+            class="form-control input-sm"
+            name="rating"
+            id="rating"
+            style="display: inline-block; width: auto"
+        >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+        </select>
+        <button
+            class="btn btn-primary btn-sm"
+            type="submit"
+            style="margin-left: 6px"
+        >
+            Save Rating
+        </button>
+    </form>
+</div>
+{% else %}
+<p class="text-muted"><em>You’re viewing your own chef profile.</em></p>
+{% endif %} {% else %}
+<p>
+    <a href="{{ url_for('auth_page') }}">Log in</a> to follow or rate this chef.
+</p>
+{% endif %}
+
+<hr />
+<h4>Recipes by {{ chef.name }}</h4>
+<table class="table table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Minutes</th>
+        <th>Servings</th>
+    </tr>
+    {% for r in recipes %}
+    <tr>
+        <td>
+            <a href="{{ url_for('recipe_detail', recipe_id=r.recipe_id) }}"
+                >{{ r.title }}</a
+            >
+        </td>
+        <td>{{ r.total_minutes or '—' }}</td>
+        <td>{{ r.servings or '—' }}</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="3">No recipes yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

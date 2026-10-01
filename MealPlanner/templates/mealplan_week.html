@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% block content %}
+<h3>
+    {{ plan.title or ("Meal Plan " ~ plan.mealplan_id) }} — Week of {{
+    week_start }} to {{ week_end }}
+</h3>
+<p>
+    Range: {{ plan.start_date }} → {{ plan.end_date }} |
+    <a href="{{ url_for('mealplan_detail', pid=plan.mealplan_id) }}"
+        >List view</a
+    >
+    {% if prev_link %} • <a href="{{ prev_link }}">Previous week</a>{% endif %}
+    {% if next_link %} • <a href="{{ next_link }}">Next week</a>{% endif %}
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Meal \ Day</th>
+            {% for d in days %}
+            <th>{{ d }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for slot in MEAL_SLOTS %}
+        <tr>
+            <th style="width: 110px; text-transform: capitalize">{{ slot }}</th>
+            {% for d in days %}
+            <td style="vertical-align: top; min-width: 160px">
+                {% for it in grid[d][slot] %}
+                <div style="margin-bottom: 6px">
+                    <a
+                        href="{{ url_for('recipe_detail', recipe_id=it.recipe_id) }}"
+                        >{{ it.title }}</a
+                    >
+                    <small class="text-muted">× {{ it.servings }}</small>
+                    {% if current_user and current_user.user_id == plan.user_id
+                    %}
+                    <form
+                        method="post"
+                        action="{{ url_for('mealplan_item_delete', item_id=it.mealplanitem_id) }}"
+                        style="display: inline"
+                    >
+                        <button
+                            class="btn btn-xs btn-link text-danger"
+                            onclick="return confirm('Remove item?')"
+                        >
+                            ✕
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+                {% else %}
+                <span class="text-muted">—</span>
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if current_user and current_user.user_id == plan.user_id %}
+<a
+    class="btn btn-default"
+    href="{{ url_for('mealplan_detail', pid=plan.mealplan_id) }}"
+    >Back to list</a
+>
+{% endif %} {% endblock %}

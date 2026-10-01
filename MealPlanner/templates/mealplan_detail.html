@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block content %}
+<h3>
+    {{ plan.title or ("Meal Plan " ~ plan.mealplan_id) }} {% if current_user and
+    current_user.user_id == plan.user_id %} {% if current_user and
+    current_user.user_id == plan.user_id %}
+    <a
+        class="btn btn-default btn-sm"
+        href="{{ url_for('mealplan_edit', pid=plan.mealplan_id) }}"
+        >Edit</a
+    >
+    <a
+        class="btn btn-info btn-sm"
+        href="{{ url_for('mealplan_week', pid=plan.mealplan_id) }}"
+        >Week view</a
+    >
+    <a
+        class="btn btn-primary btn-sm"
+        href="{{ url_for('mealplan_groceries', pid=plan.mealplan_id) }}"
+        >Grocery list</a
+    >
+    {% endif %}
+    <form
+        method="post"
+        action="{{ url_for('mealplan_delete', pid=plan.mealplan_id)}}"
+        style="display: inline; margin-left: 10px"
+    >
+        <button
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Delete this meal plan and all its items?')"
+        >
+            Delete Plan
+        </button>
+    </form>
+    {% endif %}
+</h3>
+<p>
+    Owner: {{ plan.name or "Unknown" }} • {{ plan.start_date }} → {{
+    plan.end_date }}
+</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>Date</th>
+        <th>Meal</th>
+        <th>Recipe</th>
+        <th>Servings</th>
+        <th></th>
+    </tr>
+    {% for it in items %}
+    <tr>
+        <td>{{ it.meal_date }}</td>
+        <td>{{ it.meal_type }}</td>
+        <td>
+            <a href="{{ url_for('recipe_detail', recipe_id=it.recipe_id) }}"
+                >{{ it.title }}</a
+            >
+        </td>
+        <td>{{ it.servings }}</td>
+        <td>
+            <form
+                method="post"
+                action="{{ url_for('mealplan_item_delete', item_id=it.mealplanitem_id) }}"
+            >
+                <button
+                    class="btn btn-xs btn-danger"
+                    onclick="return confirm('Remove item?')"
+                >
+                    Delete
+                </button>
+            </form>
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="5">No items yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h4>Add item</h4>
+<form
+    method="post"
+    action="{{ url_for('mealplan_add_item', pid=plan.mealplan_id) }}"
+    class="form-inline"
+>
+    <input class="form-control" type="date" name="meal_date" required />
+    <select class="form-control" name="meal_type" required>
+        <option>breakfast</option>
+        <option>lunch</option>
+        <option>dinner</option>
+        <option>snack</option>
+    </select>
+    <select class="form-control" name="recipe_id" required>
+        {% for r in recipes %}
+        <option value="{{ r.recipe_id }}">{{ r.title }}</option>
+        {% endfor %}
+    </select>
+    <input
+        class="form-control"
+        type="number"
+        name="servings"
+        min="1"
+        value="1"
+        style="width: 100px"
+    />
+    <button class="btn btn-default" type="submit">Add</button>
+</form>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% block content %}
+<h3>New Recipe</h3>
+<form method="post" action="{{ url_for('recipes_new') }}">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="form-group">
+                <label>Title</label>
+                <input
+                    class="form-control"
+                    name="title"
+                    placeholder="e.g., Hearty Lentil Soup"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label>Total Minutes</label>
+                <input
+                    class="form-control"
+                    type="number"
+                    name="total_minutes"
+                    min="1"
+                    placeholder="e.g., 45"
+                />
+            </div>
+            <div class="form-group">
+                <label>Servings</label>
+                <input
+                    class="form-control"
+                    type="number"
+                    name="servings"
+                    min="1"
+                    placeholder="e.g., 4"
+                />
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>Cuisine (pick from list or type your own)</label>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <select
+                            class="form-control"
+                            id="cuisine_name_select"
+                            onchange="document.getElementById('cuisine_name').value=this.value"
+                        >
+                            <option value="">-- name --</option>
+                            {% for c in cuisine_names %}
+                            <option value="{{ c.name }}">{{ c.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-xs-6">
+                        <select
+                            class="form-control"
+                            id="cuisine_region_select"
+                            onchange="document.getElementById('cuisine_region').value=this.value"
+                        >
+                            <option value="">-- region --</option>
+                            {% for c in cuisine_regions %}
+                            <option value="{{ c.region }}">
+                                {{ c.region }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="help-block">Or enter custom values below:</div>
+                <input
+                    class="form-control"
+                    id="cuisine_name"
+                    name="cuisine_name"
+                    placeholder="Cuisine name (e.g., Italian)"
+                    required
+                    style="margin-bottom: 6px"
+                />
+                <input
+                    class="form-control"
+                    id="cuisine_region"
+                    name="cuisine_region"
+                    placeholder="Cuisine region (e.g., Europe)"
+                    required
+                />
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <label>Diet labels (optional):</label><br />
+                {% for d in diet_options %}
+                <label class="checkbox-inline" style="margin-right: 12px">
+                    <input type="checkbox" name="diet[]" value="{{ d }}" /> {{
+                    d|capitalize }}
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-success" type="submit">Create Recipe</button>
+    <a class="btn btn-default" href="{{ url_for('index') }}">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "base.html" %} {% block content %}
+<div class="jumbotron" style="background: #f7f7f9; border: 1px solid #e6e6e6">
+    <h1 style="margin-top: 0">Meal Planner</h1>
+    <p class="lead" style="max-width: 720px">
+        Discover recipes, follow chefs, and build weekly meal plans that fit
+        your diet and allergies. Whether you’re just browsing or personalizing
+        your plan, you’re in the right place.
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('trending') }}"
+            >Explore Trending</a
+        >
+        <a class="btn btn-default btn-lg" href="{{ url_for('chef_list') }}"
+            >Browse Chefs</a
+        >
+        {% if current_user %}
+        <a class="btn btn-success btn-lg" href="{{ url_for('for_you') }}"
+            >For You</a
+        >
+        {% else %}
+        <a class="btn btn-success btn-lg" href="{{ url_for('auth_page') }}"
+            >Get Started</a
+        >
+        {% endif %}
+    </p>
+</div>
+
+<div class="row" style="margin-top: 25px">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Personalized picks</strong></div>
+            <div class="panel-body">
+                Tell us your <em>diet & allergies</em> once, and we’ll tailor
+                suggestions and meal plans. {% if not current_user %}
+                <div style="margin-top: 10px">
+                    <a
+                        class="btn btn-xs btn-success"
+                        href="{{ url_for('auth_page') }}"
+                        >Create your profile</a
+                    >
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Follow favorite chefs</strong>
+            </div>
+            <div class="panel-body">
+                Keep up with chefs you like—see their latest recipes and ratings
+                in one place.
+                <div style="margin-top: 10px">
+                    <a
+                        class="btn btn-xs btn-default"
+                        href="{{ url_for('chef_list') }}"
+                        >Browse chefs</a
+                    >
+                    {% if current_user %}
+                    <a
+                        class="btn btn-xs btn-primary"
+                        href="{{ url_for('followed_chefs') }}"
+                        >Your follows</a
+                    >
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Plan your week</strong></div>
+            <div class="panel-body">
+                Add recipes into breakfast/lunch/dinner slots and generate a
+                clean weekly overview.
+                <div style="margin-top: 10px">
+                    {% if current_user %}
+                    <a
+                        class="btn btn-xs btn-default"
+                        href="{{ url_for('mealplans_for_user', user_id=current_user.user_id) }}"
+                        >Your meal plans</a
+                    >
+                    <a
+                        class="btn btn-xs btn-primary"
+                        href="{{ url_for('mealplan_new') }}"
+                        >New meal plan</a
+                    >
+                    {% else %}
+                    <a
+                        class="btn btn-xs btn-default"
+                        href="{{ url_for('auth_page') }}"
+                        >Sign in to start planning</a
+                    >
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-info" style="margin-top: 20px">
+    <div class="panel-heading"><strong>Quick search</strong></div>
+    <div class="panel-body">
+        <form class="form-inline" method="get" action="{{ url_for('search') }}">
+            <div class="form-group" style="margin-right: 8px">
+                <label class="sr-only" for="q-cuisine">Cuisine</label>
+                <input
+                    id="q-cuisine"
+                    name="cuisine"
+                    type="text"
+                    class="form-control"
+                    placeholder="Cuisine (e.g. Italian)"
+                />
+            </div>
+            <div class="form-group" style="margin-right: 8px">
+                <label class="sr-only" for="q-region">Region</label>
+                <input
+                    id="q-region"
+                    name="region"
+                    type="text"
+                    class="form-control"
+                    placeholder="Region (e.g. Tuscany)"
+                />
+            </div>
+            <div class="form-group" style="margin-right: 8px">
+                <label class="sr-only" for="q-user">Chef</label>
+                <input
+                    id="q-user"
+                    name="user"
+                    type="text"
+                    class="form-control"
+                    placeholder="Chef name"
+                />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="{{ url_for('trending') }}" class="btn btn-link"
+                >or see what’s trending</a
+            >
+        </form>
+    </div>
+</div>
+{% endblock %}

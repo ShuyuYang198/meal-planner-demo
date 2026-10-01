@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block content %}
+<h3>Followed Chefs</h3>
+
+{% if rows and rows|length > 0 %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Chef</th>
+            <th class="hidden-xs">Cuisine</th>
+            <th class="text-center">Followers</th>
+            <th class="text-center">Rating</th>
+            <th class="text-center">Recipes</th>
+            <th class="hidden-xs">Recent</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in rows %}
+        <tr>
+            <td>
+                <a href="{{ url_for('chef_detail', user_id=c.chef_id) }}"
+                    ><strong>{{ c.chef_name }}</strong></a
+                >
+            </td>
+
+            <td class="hidden-xs">{{ c.cuisine_type or '—' }}</td>
+
+            <td class="text-center">{{ c.followers }}</td>
+
+            <td class="text-center">
+                {% if c.rating is not none %} {{ "%.1f"|format(c.rating) }} {%
+                else %} — {% endif %}
+            </td>
+
+            <td class="text-center">{{ c.recipe_count }}</td>
+
+            <td class="hidden-xs" style="max-width: 420px">
+                {% set recent = c.recent or [] %} {% if recent and recent|length
+                > 0 %} {% for r in recent %}
+                <a
+                    href="{{ url_for('recipe_detail', recipe_id=r.recipe_id) }}"
+                    class="label label-default"
+                    style="display: inline-block; margin: 2px 3px 0 0"
+                >
+                    {{ r.title }}
+                </a>
+                {% endfor %} {% else %}
+                <span class="text-muted">No recent recipes</span>
+                {% endif %}
+            </td>
+
+            <td>
+                <a
+                    class="btn btn-xs btn-primary"
+                    href="{{ url_for('chef_detail', user_id=c.chef_id) }}"
+                >
+                    Open
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-info">
+    You aren’t following any chefs yet. Browse
+    <a href="{{ url_for('chef_list') }}">All Chefs</a> and tap “Follow” on the
+    ones you like.
+</div>
+{% endif %} {% endblock %}

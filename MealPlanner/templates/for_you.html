@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block content %}
+<div class="container py-3">
+    <h3 class="mb-3">For You</h3>
+
+    {% if pref %} {% set has_any = (pref.diet or pref.allergies) %} {% if
+    has_any %}
+    <p class="text-muted" style="margin-bottom: 12px">
+        Preferences: {% if pref.diet %}
+        <span class="label label-info">{{ pref.diet }}</span>
+        {% endif %} {% if pref.allergies %}
+        <span class="label label-warning" style="margin-left: 6px"
+            >excludes: {{ pref.allergies }}</span
+        >
+        {% endif %}
+        <a
+            class="btn btn-xs btn-default"
+            href="{{ url_for('prefs') }}"
+            style="margin-left: 8px"
+            >Edit</a
+        >
+    </p>
+    {% else %}
+    <div class="alert alert-info">
+        Set your <a href="{{ url_for('prefs') }}">diet &amp; allergies</a> to
+        improve recommendations.
+    </div>
+    {% endif %} {% else %}
+    <div class="alert alert-info">
+        Set your <a href="{{ url_for('prefs') }}">diet &amp; allergies</a> to
+        improve recommendations.
+    </div>
+    {% endif %}
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Chef</th>
+                    <th class="text-center">Recent Comments</th>
+                    <th class="text-center">Recent Adds</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in rows %}
+                <tr>
+                    <td>{{ r.title }}</td>
+                    <td>{{ r.chef }}</td>
+                    <td class="text-center">{{ r.comments_30 or 0 }}</td>
+                    <td class="text-center">{{ r.adds_30 or 0 }}</td>
+                    <td>
+                        <a
+                            class="btn btn-xs btn-primary"
+                            href="{{ url_for('recipe_detail', recipe_id=r.recipe_id) }}"
+                            >Open</a
+                        >
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" class="text-muted">
+                        No recommendations yet. Try adjusting your
+                        <a href="{{ url_for('prefs') }}">preferences</a> or come
+                        back later.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

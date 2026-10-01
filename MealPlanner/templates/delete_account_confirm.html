@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+<h3>Confirm Account Deletion</h3>
+
+<div class="alert alert-danger">
+    <strong>Warning:</strong> This will permanently delete your account and
+    associated data.
+</div>
+
+<form
+    method="post"
+    action="{{ url_for('delete_account') }}"
+    class="form-inline"
+>
+    <div class="form-group">
+        <label for="confirm">Type <code>DELETE</code> to confirm</label>
+        <input
+            type="text"
+            class="form-control"
+            id="confirm"
+            name="confirm"
+            placeholder="DELETE"
+            required
+        />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete Account</button>
+    <a href="{{ url_for('index') }}" class="btn btn-default">Cancel</a>
+</form>
+{% endblock %}
